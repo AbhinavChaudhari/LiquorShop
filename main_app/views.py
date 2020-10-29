@@ -94,6 +94,7 @@ def remaningstockexport(request):
                 'stock_name',
             
                 'pack',
+                'bottols',
                 'size',
                 'qty',
                 'selling_price',
@@ -107,6 +108,7 @@ def remaningstockexport(request):
                 'stock_name',
             
                 'pack',
+                'bottols',
                 'size',
                 'qty',
                 'selling_price',
@@ -297,6 +299,7 @@ def stockreport(request):
                 'stock_name',
                 'vandor_price',
                 'pack',
+                'bottols',
                 'size',
                 'qty',
                 'selling_price',
@@ -309,6 +312,7 @@ def stockreport(request):
                 'stock_name',
                 'vandor_price',
                 'pack',
+                'bottols',
                 'size',
                 'qty',
                 'selling_price',
@@ -402,6 +406,7 @@ def salereport(request):
                 'stock_name',
                 'size',
                 'qty',
+                'bottols',
                 'price',
                 'paid',
                 'remaining',
@@ -420,6 +425,7 @@ def salereport(request):
                     'stock_name',
                     'size',
                     'qty',
+                    'bottols',
                     'price',
                     'paid',
                     'remaining',
@@ -436,6 +442,7 @@ def salereport(request):
                     'stock_name',
                     'size',
                     'qty',
+                    'bottols',
                     'price',
                     'paid',
                     'remaining',
@@ -450,9 +457,9 @@ def salereport(request):
             paid =0
             for user in users: 
                 writer.writerow(user)
-                total += user[10]
-                remaining +=user[8]
-                paid += user[7]
+                total += user[11]
+                remaining +=user[9]
+                paid += user[8]
 
             writer.writerow([])
             writer.writerow([])
@@ -494,6 +501,7 @@ def saleremaining(request):
                 'stock_name',
                 'size',
                 'qty',
+                'pack',
                 'price',
                 'paid',
                 'remaining',
@@ -517,6 +525,7 @@ def saleremaining(request):
                     'stock_name',
                     'size',
                     'qty',
+                    'pack',
                     'price',
                     'paid',
                     'remaining',
@@ -570,6 +579,7 @@ def purchaseremaining(request):
                 'stock_name',
                 'vandor_price',
                 'pack',
+                'bottols',
                 'size',
                 'qty',
                 'selling_price',
@@ -649,6 +659,7 @@ def remainingStock(request):
                 stock.stock_name = request.POST['stock_name']
                 stock.vandor_price = request.POST['vandor_price']
                 stock.pack = request.POST['pack']
+                stock.bottols = request.POST['bottols']
                 stock.size = request.POST['size']
                 stock.qty = request.POST['qty']
                 stock.selling_price = request.POST['selling_price']
@@ -657,6 +668,7 @@ def remainingStock(request):
                 remainingStock.stock_name = request.POST['stock_name']
                 remainingStock.vandor_price = request.POST['vandor_price']
                 remainingStock.pack = request.POST['pack']
+                remainingStock.bottols = request.POST['bottols']
                 remainingStock.size = request.POST['size']
                 remainingStock.qty = request.POST['qty']
                 remainingStock.selling_price = request.POST['selling_price']
@@ -771,6 +783,7 @@ def EditSale(request):
             st.stock_name = request.POST['stock_name']
             st.size = request.POST['size']
             st.qty = request.POST['qty']
+            st.bottols = request.POST['bottols']
             st.price = request.POST['price']
             st.paid = request.POST['paid']
             st.remaining = request.POST['remaining']
@@ -845,6 +858,7 @@ def purchase(request):
                 purchase.stock_name = request.POST['stock_name']
                 purchase.vandor_price = request.POST['vandor_price']
                 purchase.pack = request.POST['pack']
+                purchase.bottols = request.POST['bottols']
                 purchase.size = request.POST['size']
                 purchase.qty = request.POST['qty']
                 purchase.selling_price = request.POST['selling_price']
@@ -868,6 +882,7 @@ def purchase(request):
                 stock.stock_name = request.POST['stock_name']
                 stock.vandor_price = request.POST['vandor_price']
                 stock.pack = request.POST['pack']
+                stock.bottols = request.POST['bottols']
                 stock.size = request.POST['size']
                 stock.qty = request.POST['qty']
                 stock.selling_price = request.POST['selling_price']
@@ -1015,6 +1030,7 @@ def saleExport(request):
             'stock_name',
             'size',
             'qty',
+            'bottols',
             'price',
             'total',
             'paid',
@@ -1031,6 +1047,7 @@ def saleExport(request):
             'stock_name',
             'size',
             'qty',
+            'bottols',
             'price',
             'total',
             'paid',
@@ -1060,6 +1077,7 @@ def purchaseExport(request):
             'Stock_name',
             'Vandor_price',
             'Pack',
+            'Bottols',
             'Size',
             'Qty',
             'Selling Price',
@@ -1077,6 +1095,7 @@ def purchaseExport(request):
             'stock_name',
             'vandor_price',
             'pack',
+            'bottols',
             'size',
             'qty',
             'selling_price',
@@ -1129,6 +1148,7 @@ def stockExport(request):
         'stock_name',
         'vandor_price',
         'pack',
+        'bottols',
         'size',
         'qty',
         'selling_price',
@@ -1140,6 +1160,7 @@ def stockExport(request):
         'stock_name',
         'vandor_price',
         'pack',
+        'bottols',
         'size',
         'qty',
         'selling_price',

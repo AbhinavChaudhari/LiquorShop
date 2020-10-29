@@ -66,6 +66,14 @@
                     </div>
                 </div>
                 <div class="col-md-2">
+                    <div class="form-group">
+                        <label for="">Bottols</label>
+                        <input required type="number" class="form-control text-center" name="bottols" id="bottols"
+                            aria-describedby="helpId" required placeholder="Bottols">
+
+                    </div>
+                </div>
+                <div class="col-md-2">
                     <div class="form-group form-group-sm">
                         <label for="">Quantity</label>
                         <input required type="number" class="form-control text-center" name="qty" id="qty"
@@ -134,8 +142,11 @@
                     <div class="form-group">
                      <label for="">Remark</label>
                      <input required type="text" class="form-control" name="remark" id="remark" placeholder="Remark" >
-                      <button type="submit" class="btn btn-success mt-2 px-3 "> + Add</button>
+                      
                     </div>
+                </div>
+                <div class="col-md-2">
+                    <button type="submit" class="btn btn-success d-flex align-items-end my-4 "> + Add</button>
                 </div>
                 
         </form>
@@ -162,6 +173,7 @@
                             <th>Stock Name</th>
                             <th>QTY</th>
                             <th>Pack</th>
+                            <th>Bottols</th>
                             <th>Size</th>
                             <th>Vendor price</th>
                             <th>Total</th>
@@ -185,6 +197,7 @@
                             <td>{{ purchase.stock_name }}</td>
                             <td>{{ purchase.qty }}</td>
                             <td>{{ purchase.pack }}</td>
+                            <td>{{ purchase.bottols }}</td>
                             <td>{{ purchase.size }}</td>
                             <td>{{ purchase.vandor_price }}</td>
                             <td>{{ purchase.total }}</td>
